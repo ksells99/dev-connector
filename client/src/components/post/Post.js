@@ -12,6 +12,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
     // Call getPost function, pass in post ID from URL
     getPost(match.params.id);
+    // eslint-disable-next-line
   }, [getPost]);
 
   return loading || post === null ? (
